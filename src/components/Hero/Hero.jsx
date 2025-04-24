@@ -1,12 +1,11 @@
 import { IoBagHandleOutline } from "react-icons/io5";
 import HeroPng from "../../assets/fruit-plate.png";
-import LeafPng from "../../assets/Leaf.png";
+import LeafPng from "../../assets/leaf.png"; // ✅ fixed case
 import { motion } from "framer-motion";
 import { FadeRight } from "../../utility/animation";
 import BTN from "../BTN/BTN";
 
 const Hero = () => {
-  const x = 2;
   return (
     <section>
       <div
@@ -19,6 +18,7 @@ const Hero = () => {
     </section>
   );
 };
+
 function Info() {
   return (
     <div
@@ -50,11 +50,10 @@ function Info() {
           animate="visible"
           className="text-gray-400">
           Healthy and yummy food for fresh morning breakfast. Eat Daily for good
-          health and mind Order now and get 20% off on your first order
+          health and mind. Order now and get 20% off on your first order.
         </motion.p>
         {/* button section */}
         <BTN fade={FadeRight(1.5)}>
-          {" "}
           <span>
             <IoBagHandleOutline />
           </span>
@@ -65,7 +64,6 @@ function Info() {
   );
 }
 
-
 function HeroImage() {
   return (
     <div className="flex justify-center items-center">
@@ -75,27 +73,27 @@ function HeroImage() {
         transition={{ duration: 1, delay: 0.2 }}
         src={HeroPng}
         alt="Fruit Plate"
-        className="w-[350px]
-    md:w-[550px] drop-shadow"
+        className="w-[350px] md:w-[550px] drop-shadow"
       />
     </div>
   );
 }
+
 function LeafImage() {
   return (
     <div
-      className=" absolute top-14 md:top-0 right-1/2
-blur-sm opacity-80 rotate-[40deg]">
+      className="absolute top-14 md:top-0 right-1/2
+      blur-sm opacity-80 rotate-[40deg]">
       <motion.img
         initial={{ opacity: 0, y: -200, rotate: 75 }}
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
         src={LeafPng}
         alt="Leaf"
-        className="w-full 
-  md:max-w-[300px] "
+        className="w-full md:max-w-[300px]"
       />
     </div>
   );
 }
+
 export default Hero;
