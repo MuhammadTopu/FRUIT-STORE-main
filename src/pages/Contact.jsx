@@ -7,7 +7,10 @@ const Contact = () => {
           <h1 className="text-4xl font-bold mb-4 text-primary">Contact Us</h1>
           <p className="text-gray-600 mb-6">We’d love to hear from you! Fill out the form below and we’ll get back to you shortly.</p>
 
-          <form className="space-y-4">
+          <form className="space-y-4"
+            action="https://formspree.io/f/mjkwvzql"
+            method="post"
+            >
             <div>
               <label className="block mb-1 text-sm font-medium text-gray-700">Your Name</label>
               <input
